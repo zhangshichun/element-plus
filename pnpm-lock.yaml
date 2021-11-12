@@ -30,6 +30,7 @@ importers:
       '@types/through2': 2.0.36
       '@typescript-eslint/eslint-plugin': 5.5.0
       '@typescript-eslint/parser': 5.5.0
+      '@vitejs/plugin-vue': 1.10.1
       '@vue/compiler-sfc': 3.2.23
       '@vue/test-utils': 2.0.0-rc.16
       '@vueuse/core': ^7.0.0
@@ -63,7 +64,6 @@ importers:
       rollup-plugin-css-only: 3.1.0
       rollup-plugin-esbuild: 4.7.2
       rollup-plugin-filesize: 9.1.1
-      rollup-plugin-vue: 6.0.0
       sass: 1.44.0
       sucrase: 3.20.3
       through2: 4.0.2
@@ -108,6 +108,7 @@ importers:
       '@types/through2': 2.0.36
       '@typescript-eslint/eslint-plugin': 5.5.0_2a935f58a3cc0b0f42856ccf18d8367f
       '@typescript-eslint/parser': 5.5.0_eslint@8.3.0+typescript@4.5.2
+      '@vitejs/plugin-vue': 1.10.1
       '@vue/compiler-sfc': 3.2.23
       '@vue/test-utils': 2.0.0-rc.16_vue@3.2.23
       chalk: 4.1.2
@@ -135,7 +136,6 @@ importers:
       rollup-plugin-css-only: 3.1.0_rollup@2.60.2
       rollup-plugin-esbuild: 4.7.2_esbuild@0.14.1+rollup@2.60.2
       rollup-plugin-filesize: 9.1.1
-      rollup-plugin-vue: 6.0.0_@vue+compiler-sfc@3.2.23
       sass: 1.44.0
       sucrase: 3.20.3
       through2: 4.0.2
@@ -1971,6 +1971,13 @@ packages:
     dependencies:
       '@typescript-eslint/types': 5.5.0
       eslint-visitor-keys: 3.1.0
+    dev: true
+
+  /@vitejs/plugin-vue/1.10.1:
+    resolution: {integrity: sha512-oL76QETMSpVE9jIScirGB2bYJEVU/+r+g+K7oG+sXPs9TZljqveoVRsmLyXlMZTjpQkLL8gz527cW80NMGVKJg==}
+    engines: {node: '>=12.0.0'}
+    peerDependencies:
+      vite: ^2.5.10
     dev: true
 
   /@vitejs/plugin-vue/1.10.1_vite@2.6.14:
@@ -4850,10 +4857,6 @@ packages:
     engines: {node: '>=4.0'}
     dev: true
 
-  /estree-walker/0.6.1:
-    resolution: {integrity: sha512-SqmZANLWS0mnatqbSfRP5g8OXZC12Fgg1IwNtLsyHDzJizORW4khDfjPqJZsemPWBB2uqykUah5YpQ6epsqC/w==}
-    dev: true
-
   /estree-walker/1.0.1:
     resolution: {integrity: sha512-1fMXF3YP4pZZVozF8j/ZLfvnR8NSIljt56UhbZ5PeeDmmGHpgpdwQt7ITlGvYaQukCvuBRMLEiKiYC+oeIg4cg==}
     dev: true
@@ -5789,10 +5792,6 @@ packages:
     engines: {node: '>= 0.4.0'}
     dependencies:
       function-bind: 1.1.1
-    dev: true
-
-  /hash-sum/2.0.0:
-    resolution: {integrity: sha512-WdZTbAByD+pHfl/g9QSsBIIwy8IT+EsPiKDs0KNX+zSHhdDLFKdZu0BQHljvO+0QI/BasbMSUa8wYNCZTvhslg==}
     dev: true
 
   /homedir-polyfill/1.0.3:
@@ -9150,25 +9149,6 @@ packages:
       terser: 5.7.1
     transitivePeerDependencies:
       - supports-color
-    dev: true
-
-  /rollup-plugin-vue/6.0.0_@vue+compiler-sfc@3.2.23:
-    resolution: {integrity: sha512-oVvUd84d5u73M2HYM3XsMDLtZRIA/tw2U0dmHlXU2UWP5JARYHzh/U9vcxaN/x/9MrepY7VH3pHFeOhrWpxs/Q==}
-    peerDependencies:
-      '@vue/compiler-sfc': '*'
-    dependencies:
-      '@vue/compiler-sfc': 3.2.23
-      debug: 4.3.2
-      hash-sum: 2.0.0
-      rollup-pluginutils: 2.8.2
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
-  /rollup-pluginutils/2.8.2:
-    resolution: {integrity: sha512-EEp9NhnUkwY8aif6bxgovPHMoMoNr2FulJziTndpt5H9RdwC47GSGuII9XxpSdzVGM0GWrNPHV6ie1LTNJPaLQ==}
-    dependencies:
-      estree-walker: 0.6.1
     dev: true
 
   /rollup/2.58.3:
