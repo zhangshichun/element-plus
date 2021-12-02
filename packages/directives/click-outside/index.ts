@@ -22,11 +22,11 @@ const nodeList: FlushList = new Map()
 let startClick: MouseEvent
 
 if (!isServer) {
-  on(document, 'mousedown', (e: MouseEvent) => (startClick = e))
-  on(document, 'mouseup', (e: MouseEvent) => {
+  on(document, 'mousedown', (e: Event) => (startClick = e as MouseEvent))
+  on(document, 'mouseup', (e: Event) => {
     for (const handlers of nodeList.values()) {
       for (const { documentHandler } of handlers) {
-        documentHandler(e, startClick)
+        documentHandler(e as MouseEvent, startClick)
       }
     }
   })
